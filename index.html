@@ -6,6 +6,10 @@
     <title>Farmácia Drogaria Gonçalves</title>
     <link rel="stylesheet" href="styles.css">
     <script>
+        function scrollToCart() {
+            document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
+}
+
         function addToCart(productName, productPrice) {
             const cart = document.getElementById('cart-items');
             const cartItem = document.createElement('div');
