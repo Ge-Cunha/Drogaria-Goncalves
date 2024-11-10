@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmácia Drogaria Gonçalves</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
     <script>
         function scrollToCart() {
             document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
@@ -78,7 +79,15 @@
     <header>
         <h1>Farmácia Drogaria Gonçalves</h1>
         <p>Assaí, Paraná - Em frente ao Banco do Brasil</p>
+    
+        <form id="search-form" onsubmit="searchProducts(event)">
+            <input type="text" id="search-input" placeholder="Pesquisar produtos...">
+            <button type="submit">Buscar</button>
+        </form>
+    
+        
     </header>
+    
 
     <nav>
         <ul>
