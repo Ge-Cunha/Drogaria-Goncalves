@@ -6,6 +6,7 @@
     <title>Farmácia Drogaria Gonçalves</title>
     <link rel="stylesheet" href="styles.css">
     <script>
+<<<<<<< HEAD
         function scrollToCart() {
             document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
         }
@@ -23,12 +24,27 @@
             updateTotal(productPrice);
             scrollToCart();  // Chamada correta da função
         }
+=======
+function scrollToCart() {
+    document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
+}
+>>>>>>> 5a52ee6a2ac935041f6e2d4c9c9a41f1841a8bd3
 
-        function removeFromCart(element, productPrice) {
-            element.parentElement.remove();
-            updateTotal(-productPrice);
-        }
+function addToCart(productName, productPrice) {
+    const cart = document.getElementById('cart-items');
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.innerHTML = `
+        <p>${productName}</p>
+        <p>R$ ${productPrice.toFixed(2)}</p>
+        <button onclick="removeFromCart(this, ${productPrice.toFixed(2)})">Remover</button>
+    `;
+    cart.appendChild(cartItem);
+    updateTotal(productPrice);
+    scrollToCart();  // Chamada correta da função
+}
 
+<<<<<<< HEAD
         function updateTotal(price) {
             const totalElement = document.getElementById('cart-total');
             let currentTotal = parseFloat(totalElement.innerText.replace('Total: R$', ''));
@@ -62,6 +78,53 @@
                 backToTopButton.style.display = "none";
             }
         }
+=======
+function removeFromCart(element, productPrice) {
+    element.parentElement.remove();
+    updateTotal(-productPrice);
+}
+
+function updateTotal(price) {
+    const totalElement = document.getElementById('cart-total');
+    let currentTotal = parseFloat(totalElement.innerText.replace('Total: R$', ''));
+    currentTotal += price;
+    totalElement.innerText = `Total: R$ ${currentTotal.toFixed(2)}`;
+}
+
+function redirectToWhatsApp() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    const cartTotal = document.getElementById('cart-total').innerText;
+    let message = "Olá, gostaria de fazer o pedido dos seguintes produtos:\n";
+    
+    cartItems.forEach(item => {
+        const productName = item.querySelector('p:first-child').innerText;
+        const productPrice = item.querySelector('p:nth-child(2)').innerText;
+        message += `- ${productName} (${productPrice})\n`;
+    });
+    message += `\n${cartTotal}`;
+    
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/5543984026621?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    var backToTopButton = document.getElementById("backToTopButton");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {scrollFunction()}; function scrollFunction() { var backToTopButton = document.getElementById("backToTopButton"); if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { backToTopButton.style.display = "block"; } else { backToTopButton.style.display = "none"; } } function scrollToTop() { document.body.scrollTop = 0; document.documentElement.scrollTop = 0; }
+>>>>>>> 5a52ee6a2ac935041f6e2d4c9c9a41f1841a8bd3
 
         function scrollToTop() {
             document.body.scrollTop = 0;
