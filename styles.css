@@ -18,12 +18,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url('https://img.freepik.com/vetores-premium/interior-da-farmacia-com-prateleiras-de-comprimidos_273525-292.jpg?w=360') no-repeat center center fixed;
+    background: url('https://img.freepik.com/fotos-premium/tecnologia-de-rede-hexagonal-abstrata-em-fundo-gradiente-azul_437781-1106.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     position: relative;
-    color: white; /* Altere a cor do texto para branco para melhor visibilidade */
+    color: rgb(255, 255, 255); /* Altere a cor do texto para branco para melhor visibilidade */
 }
 
 body::before {
@@ -60,7 +60,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -75,14 +75,14 @@ section {
     padding: 2em;
     margin: 1em auto;
     max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.664); /* Fundo branco semi-transparente */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: black; /* Cor do texto preta para melhor visibilidade */
 }
 
 /* Aplicando o estilo uniforme a todas as seções */
 section.standard {
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+    background-color: rgba(255, 0, 0, 0.8); /* Fundo branco semi-transparente */
     padding: 2em;
     margin: 1em auto;
     max-width: 800px;
@@ -138,7 +138,7 @@ footer {
 hr {
     border: none;
     height: 1px;
-    background-color: #ddd;
+    background-color: #0059ff;
     margin: 20px 0;
 }
 
