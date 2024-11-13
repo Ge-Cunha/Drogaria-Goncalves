@@ -18,12 +18,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: url('https://img.freepik.com/fotos-premium/uma-gota-de-agua-azul-repousa-sobre-uma-superficie-com-as-palavras-agua-nela_828075-636.jpg') no-repeat center center fixed;
+    background: url('https://img.freepik.com/premium-photo/test-tube-with-blue-liquid-inside_894218-6582.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     position: relative;
-    color: rgb(255, 255, 255); /* Altere a cor do texto para branco para melhor visibilidade */
+    color: white; /* Altere a cor do texto para branco para melhor visibilidade */
 }
 
 body::before {
@@ -60,7 +60,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -75,14 +75,14 @@ section {
     padding: 2em;
     margin: 1em auto;
     max-width: 800px;
-    background-color: rgba(255, 255, 255, 0.664); /* Fundo branco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: black; /* Cor do texto preta para melhor visibilidade */
 }
 
 /* Aplicando o estilo uniforme a todas as seções */
 section.standard {
-    background-color: rgba(255, 0, 0, 0.8); /* Fundo branco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
     padding: 2em;
     margin: 1em auto;
     max-width: 800px;
@@ -138,7 +138,7 @@ footer {
 hr {
     border: none;
     height: 1px;
-    background-color: #0059ff;
+    background-color: #ddd;
     margin: 20px 0;
 }
 
@@ -151,6 +151,7 @@ header, nav, section, footer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 #search-form {
     display: flex;
     justify-content: center;
@@ -177,4 +178,40 @@ header, nav, section, footer {
 
 #search-form button:hover {
     background-color: #005f99;
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #backToTopButton {
+        right: 10px;
+        bottom: 10px;
+        font-size: 18px;
+    }
+
+    section, section.standard {
+        padding: 1em;
+        margin: 0.5em auto;
+        max-width: 100%;
+    }
 }
