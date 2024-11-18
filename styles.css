@@ -215,3 +215,21 @@ header, nav, section, footer {
         max-width: 100%;
     }
 }
+/* seu_estilo.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.horarios {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ff0000;
+}
