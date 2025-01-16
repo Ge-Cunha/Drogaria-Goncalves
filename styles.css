@@ -39,23 +39,26 @@ body::before {
 
 header {
     padding: 1em;
-    text-align: center;
+    text-align: center; 
     background-color: rgba(30, 144, 255, 0.7); /* Fundo azul semi-transparente */
 }
 
 nav {
     background-color: rgba(0, 64, 128, 0.7); /* Fundo azul escuro semi-transparente */
     overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centrando os itens no navegador */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    float: left;
+    display: flex;
 }
 
 nav ul li a {
@@ -80,7 +83,6 @@ section {
     color: black; /* Cor do texto preta para melhor visibilidade */
 }
 
-/* Aplicando o estilo uniforme a todas as seções */
 section.standard {
     background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
     padding: 2em;
@@ -212,24 +214,12 @@ header, nav, section, footer {
     section, section.standard {
         padding: 1em;
         margin: 0.5em auto;
-        max-width: 100%;
+        max-width: 95%;
     }
-}
-/* seu_estilo.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
 }
 
 .horarios {
     font-weight: bold;
     font-size: 1.2em;
-    margin: 10px 0;
     color: #ff0000;
 }
