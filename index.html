@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
-    
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-N784D6RH');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmácia Drogaria Gonçalves</title>
-    <meta name="google-site-verification" content="L_XMuPxREjaiOlEEd7cu85mdF_KwY2f9AcgsVUc7MGw" />
+    
     <link rel="stylesheet" href="styles.css">
-    <!-- Adicione o código de acompanhamento do Google Analytics abaixo -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJQD6HJ2W3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-QJQD6HJ2W3');
     </script>
-    <!-- Fim do código de acompanhamento do Google Analytics -->
     <script src="scripts.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Força a rolagem para o topo quando a página é carregada
+            window.scrollTo(0, 0);
+
+            // Garanta que o campo de entrada não ganhe foco automaticamente
+            document.getElementById('search-input').blur();
+        });
+
         function scrollToCart() {
             document.getElementById('cart').scrollIntoView({ behavior: 'smooth' });
         }
@@ -90,35 +86,20 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    <style>
-        .horarios { font-weight: bold; font-size: 1.2em; margin: 10px 0; }
-    </style>
 </head>
-
 <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N784D6RH"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-    
 
-    <!-- Conteúdo da página --> 
     <button onclick="scrollToTop()" id="backToTopButton">↑</button>
 
-   
-</header>
-
-
+    <header>
         <h1 style="font-size: 2em;">Farmácia Drogaria Gonçalves</h1>
         <p style="font-size: 1.2em;">Assaí, Paraná - Em frente ao Banco do Brasil</p>
-        
         
         <form id="search-form" onsubmit="searchProducts(event)">
             <input type="text" id="search-input" placeholder="Pesquisar produtos..." style="font-size: 1em;">
             <button type="submit" style="font-size: 1em;">Buscar</button>
         </form>
     </header>
-    
 
     <nav>
         <ul>
@@ -142,11 +123,9 @@
         <p>Sua saúde é nossa prioridade. Confira nossos serviços e produtos de alta qualidade.</p>
 
         <h2 style="color:red; display:none;">Plantão da Farmácia</h2>
-<p class="horarios" style="color:red; display:none;">
-    <strong>Período:</strong> 28/12/2024 a 03/01/2025
-</p>
-
-
+        <p class="horarios" style="color:red; display:none;">
+            <strong>Período:</strong> 28/12/2024 a 03/01/2025
+        </p>
         <p class="horarios" style="color:red;">
             <strong>Horário:</strong> 
             <ul>
@@ -157,7 +136,6 @@
                 <li><strong>Sexta-feira:</strong> 08:00 às 19:00</li>
                 <li><strong>Sábado:</strong> 08:00 às 12:00</li>
                 <li><strong>Domingo:</strong> Fechado </li>
-                
             </ul>
         </p>
         <p class="horarios" style="color:red;">
@@ -167,17 +145,12 @@
                 <li>Fixo: (43) 3262-3327</li>
             </ul>
         </p>
-        
-
-
-
-
     </section>
 
     <hr>
 
     <section id="promocoes">
-        <h2><span style="color: red;">Promoções</span>
+        <h2><span style="color: red;">Promoções</span></h2>
         <p>Confira as promoções imperdíveis deste mês!</p>
         
         <div class="product">
@@ -189,18 +162,14 @@
             <button onclick="addToCart('Shampoo Pantene Restauração 350ml + Condicionador 175ml', 31.99)">Adicionar ao Carrinho</button>
         </div>
         
-
-
         <div class="product">
             <a href="produto-kit-shampoo-condicionador-niely-gold.html">
                 <img src="https://lojaslivia.fbitsstatic.net/img/p/kit-shampoo-275-ml-condicionador-175-ml-niely-gold-liso-pleno-70644/255766.jpg?w=265&h=265&v=no-change&qs=ignore" alt="Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold" width="50" height="50">
                 <p>Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold</p>
                 <p style="color:red;">De <s>R$ 24,99</s> por R$ 19,99</p>
             </a>
-            <button onclick="addToCart('Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold', 19.99)">Adicionar ao Carrinho</button>
+            
         </div>
-        
-        
 
         <div class="product">
             <a href="chupeta-beijamin.html">
@@ -210,28 +179,34 @@
             </a>
             <button onclick="addToCart('Chupeta Beijamin', 4.99)">Adicionar ao Carrinho</button>
         </div>
-        
-        
-        
+
         <div class="product">
             <a href="mamadeira-mamita-plus-240ml.html">
                 <img src="https://down-br.img.susercontent.com/file/fe66e59b2e502830051627f6275caf50" alt="Mamadeira Mamita Plus 240ml">
                 <p>Mamadeira Mamita Plus 240ml</p>
-                <p><del>R$ 15,00</del>   <strong>R$ 9,99</strong></p>
+                <p><del>R$ 15,00</del> <strong>R$ 9,99</strong></p>
             </a>
             <button onclick="addToCart('Mamadeira Mamita Plus 240ml', 9.99)">Adicionar ao Carrinho</button>
         </div>
-        
+
         <div class="product">
             <a href="produto3.html">
                 <img src="https://uploads.consultaremedios.com.br/product_variation_images/full/29275d40a5cc38d4973754e3f020b680358648bf.jpg?1612183177" alt="Toalhinha Umedecida Papegu Baby Com 50 Un">
                 <p>Toalhinha Umedecida Papegu Baby Com 50 Un</p>
-                <p><del>R$7,00</del>  <strong><R1>R$4,99</R1></strong></p>
+                <p><del>R$7,00</del><strong>R$4,99</strong></p>
             </a>
             <button onclick="addToCart('Toalhinha Umedecida Papegu Baby Com 50 Un', 4.99)">Adicionar ao Carrinho</button>
         </div>
+
+
+    
+    
+    
     </section>
-    <hr>
+
+
+    
+     <hr>
 
     <section id="Vitamina">
         <h2>Vitamina</h2>
