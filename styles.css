@@ -247,4 +247,8 @@ button {
     box-shadow: 0 5px #999999; /* Sombra externa para o efeito 3D */
     transform: translateY(-3px); /* Move o botão ligeiramente para cima */
 }
-
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
