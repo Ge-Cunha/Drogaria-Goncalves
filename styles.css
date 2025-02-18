@@ -1,3 +1,8 @@
+p {
+    color: #000000ea;
+    font-family: cursive;
+}
+
 #backToTopButton {
     position: fixed;
     bottom: 20px;
