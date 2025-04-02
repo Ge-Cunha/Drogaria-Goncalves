@@ -124,23 +124,19 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Conteúdo da página --> 
-    <button onclick="scrollToTop()" id="backToTopButton">↑</button>
+    <button id="backToTopButton" onclick="scrollToTop()" >↑</button>
    
 </body>
 <body>
     <header>
-        <h1 style="font-size: 2em;">Farmácia Drogaria Gonçalves</h1>
-        <p style="font-size: 1.2em;">Assaí, Paraná - Em frente ao Banco do Brasil</p>
+        <img src="imagens/fundo completo.png" alt="">
         
-        <form id="search-form" onsubmit="searchProducts(event)">
-            <input type="text" id="search-input" placeholder="Pesquisar produtos..." style="font-size: 1em;">
-            <button type="submit" style="font-size: 1em;">Buscar</button>
-        </form>
+        
     </header>
 
     <nav>
         <ul>
-            <li><a href="#cart">Carrinho de Compras</a></li>
+            <li><a href="#carrinho">Carrinho de Compras</a></li>
             <li><a href="#home">Início</a></li>
             <li><a href="#promocoes">Promoções</a></li>
             <li><a href="#vitamina">Vitaminas</a></li>
@@ -150,13 +146,15 @@
             <li><a href="#beleza">Beleza</a></li>
             <li><a href="#fraldas-cuidados-infantis">Fraldas e Cuidado Infantil</a></li>
             <li><a href="#equipamentos-medicos">Equipamentos Médicos</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
+    <form id="search-form" onsubmit="searchProducts(event)">
+        <input type="text" id="search-input" placeholder="Pesquisar produtos..." style="font-size: 1em;">
+        <button id="pesquisa" type="submit" style="font-size: 1em;">Buscar</button>
+    </form>
     
     
-    <hr>
-
 
     <section id="home">
         <h2>Bem-vindo à Drogaria Gonçalves</h2>
@@ -215,7 +213,7 @@
     <section id="promocoes">
         <h2><span style="color: red;">Promoções</span>
         <p>Confira as promoções imperdíveis deste mês!</p>
-        
+    <div class="produtos">
         <div class="product">
             <a href="produto13.html">
                 <img src="https://muffatosupermercados.vtexassets.com/arquivos/ids/378465-800-auto?v=638436161712370000&width=800&height=auto&aspect=true" alt="Shampoo Pantene Restauração 350ml + Condicionador 175ml">
@@ -271,7 +269,7 @@
 
     <section id="vitamina">
         <h2>Vitamina</h2>
-        
+    <div class="produtos">  
         <div class="product">
             <a href="suplemento-vitaminico-lavitan-a-z-original.html">
                 <img src="https://drogariacristal.com/media/catalog/product/cache/dc75f304252411b8c602e1e96d99390d/s/u/suplemento_vitam_nico_lavitan_a-z_original_com_60_comprimidos.jpg" alt="SUPLEMENTO VITAMÍNICO LAVITAN A-Z ORIGINAL COM 60 COMPRIMIDOS">
@@ -307,8 +305,8 @@
             </a>
             <button onclick="addToCart('Vitaminas Cabelos e Unhas, Dourados, Lavitan, 30 cápsulas', 24.99)">Adicionar ao Carrinho</button>
         </div>
-        
-    
+    </div>  
+    </div>
     
     
     
@@ -321,7 +319,7 @@
     
     <section id="medicamentos">
         <h2>Medicamentos</h2>
-        
+    <div class="produtos"> 
         <div class="product">
             <a href="aspirina-adulto-500mg.html">
                 <img src="https://drogariasoares.com.br/BACKOFFICE/Uploads/Produto/Ampliada/518605-28573.jpeg" alt="Aspirina Adulto 500 mg com 10 comprimidos">
@@ -606,12 +604,13 @@
             </a>
             <button onclick="addToCart('Ultracler Abacaxi 10ml', 1.99)">Adicionar ao Carrinho</button>
         </div>
+    </div>
     </section>
     
     <hr>
 <section id="pomadas">
     <h2>Pomadas</h2>
-    
+    <div class="produtos"> 
     <div class="product">
         <a href="bacina-pomada-dermatologica-15g.html">
             <img src="https://phygital-files.mercafacil.com/essencyalfarma/uploads/produto/sulftato_de_neomicina_bacitracina_bacina_pomada_15_g_ref_nebacetin__65d85726-ea70-49d2-91e4-3e27e04c0083.png" alt="Bacina Pomada Dermatológica com 15g">
@@ -691,7 +690,7 @@
         </a>
         <button onclick="addToCart('Vick Vaporub Pomada', 18.99)">Adicionar ao Carrinho</button>
     </div>
-    
+    </div>
     
     
 </section>
@@ -702,7 +701,7 @@
     
     <section id="higiene">
         <h2>Higiene</h2>
-        
+        <div class="produtos"> 
         <div class="product">
             <a href="produto10.html">
                 <img src="https://prezunic.vtexassets.com/arquivos/ids/178727/656788c31ef3739680760dc8.jpg?v=638368808437700000" alt="Creme Dental Colgate Total 12 Clean Mint 90g">
@@ -978,7 +977,7 @@
             </a>
             <button onclick="addToCart('Creme Hidratante Corporal Monange 200Ml', 14.99)">Adicionar ao Carrinho</button>
         </div>
-        
+        </div>
 
         
     </section>
@@ -986,7 +985,7 @@
     
     <section id="beleza">
         <h2>Belezas</h2>
-
+        <div class="produtos"> 
         <div class="product">
             <a href="bozzano-gel-fixador-300g.html">
                 <img src="https://junto.com.br/wp-content/uploads/2017/06/Bozzano_1.jpg" alt="Bozzano Gel Fixador 300G Efeito Molhado">
@@ -1139,7 +1138,9 @@
     
     <section id="fraldas-cuidados-infantis">
         <h2>Fraldas e Cuidados Infantis</h2>
+        <div class="produtos"> 
         <div class="product">
+             
             <a href="bepantol-baby-30g.html">
                 <img src="https://www.drogaraia.com.br/_next/image?url=https%3A%2F%2Fproduct-data.raiadrogasil.io%2Fimages%2F3709397.webp%3Fwidth%3D450%26height%3D450%26quality%3D85%26type%3Dresize&w=640&q=75">
                 <p>Bepantol Baby Creme Preventivo de Assaduras Para Bebês 30G</p>
@@ -1315,7 +1316,7 @@
             </a>
             <button onclick="addToCart('Toalhinha Umedecida Papegu Baby Com 50 Un', 4.99)">Adicionar ao Carrinho</button>
         </div>
-    
+        </div>
         
     </section>
     
@@ -1324,7 +1325,7 @@
     
     <section id="equipamentos-medicos">
         <h2>Equipamentos Médicos</h2>
-    
+        <div class="produtos"> 
         <div class="product">
             <a href="produto18.html">
                 <img src="https://images.tcdn.com.br/img/img_prod/1077001/kit_esfigmomanometro_aneroide_com_estetoscopio_premium_207_2_80e00ef83f4f7a1ce3762ca378f0c7d3.jpg" alt="Esfigmomanômetro Premium">
@@ -1354,27 +1355,28 @@
             </a>
             <button onclick="addToCart('Termômetro Clínico Digital Branco (G-TECH)', 23.50)">Adicionar ao Carrinho</button>
         </div>
+        </div>
         
     </section>
     
     
     <hr>
 
-    <section id="cart">
+    <div id="carrinho">
         <h2>Carrinho de Compras</h2>
         <div id="cart-items"></div>
         <div id="cart-total" class="cart-total">Total: R$ 0.00</div>
         <button onclick="redirectToWhatsApp()">Enviar pelo WhatsApp</button>
-    </section>
+    </div>
 
     <hr>
 
-    <section id="contact">
+    <div id="contato">
         <h2>Contato</h2>
         <p>Telefone fixo: ☎️(43) 3262-3327</p>
         <p>Telefone e WhatsApp: <a href="https://wa.me/5543984026621" target="_blank">📱(43) 98402-6621</a></p>
         <p>Siga-nos no Instagram: <a href="https://www.instagram.com/drogariagoncalves_/" target="_blank">@drogariagoncalves_</a></p>
-    </section>
+    </div>
 
     <hr>
 
